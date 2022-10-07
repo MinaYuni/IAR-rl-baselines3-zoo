@@ -257,11 +257,11 @@ class ExperimentManager(object):
             else:
                 raise ValueError(f"Hyperparameters not found for {self.algo}-{self.env_id}")
 
-        if self.custom_hyperparams is not None:
+        #if self.custom_hyperparams is not None:
             # Overwrite hyperparams if needed
             
             # hyperparams.update(self.custom_hyperparams)
-            # Kiara: Commented above line because custom parameters squash the given parameters and use ActorCritic
+        # Kiara: Commented above block because custom parameters squash the given parameters and use ActorCritic
             
         # Sort hyperparams that will be saved
         saved_hyperparams = OrderedDict([(key, hyperparams[key]) for key in sorted(hyperparams.keys())])
