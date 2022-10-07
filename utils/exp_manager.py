@@ -248,7 +248,11 @@ class ExperimentManager(object):
 
     def read_hyperparameters(self) -> Tuple[Dict[str, Any], Dict[str, Any]]:
         # Load hyperparameters from yaml file
-        with open(f"hyperparams/{self.algo}.yml", "r") as f:
+        
+        # with open(f"hyperparams/{self.algo}.yml", "r") as f:
+        
+        # !! Kiara: The following line only works with Colab
+        with open(f"/content/IAR-rl-baselines3-zoo/hyperparams/{self.algo}.yml", "r") as f:
             hyperparams_dict = yaml.safe_load(f)
             if self.env_id in list(hyperparams_dict.keys()):
                 hyperparams = hyperparams_dict[self.env_id]
