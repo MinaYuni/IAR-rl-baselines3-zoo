@@ -74,5 +74,5 @@ for folder in dirs:
 
 plt.legend()
 plt.tight_layout()
-plt.savefig("test.png")
+plt.savefig("plot_"+algo+"_"+envs+".png")
 plt.show()
