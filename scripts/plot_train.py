@@ -72,7 +72,9 @@ for folder in dirs:
         x, y_mean = window_func(x, y, args.episode_window, np.mean)
         plt.plot(x, y_mean, linewidth=2, label=folder.split("/")[-1])
 
+envs_str = "_".join(envs)
+
 plt.legend()
 plt.tight_layout()
-plt.savefig("plot_"+algo+"_"+envs+".png")
+plt.savefig("plot-algo_"+algo+"-envs_"+envs_str+".png")
 plt.show()
