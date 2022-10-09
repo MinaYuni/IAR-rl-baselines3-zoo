@@ -238,5 +238,10 @@ if args.output is not None:
     with open(f"{args.output}.pkl", "wb") as file_handler:
         pickle.dump(post_processed_results, file_handler)
 
+nom_algos = "_".join(args.algos)
+nom_envs = "_".join(args.envs)
+
+plt.savefig("./plot/all_plots-alogs_"+nom_algos+"-envs_"+nom_envs+".png")
+
 if not args.no_display:
     plt.show()
