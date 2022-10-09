@@ -239,7 +239,7 @@ if args.output is not None:
         pickle.dump(post_processed_results, file_handler)
 
 nom_algos = "_".join(args.algos)
-nom_envs = "_".join(args.envs)
+nom_envs = "_".join(args.env)
 
 plt.savefig("./plot/all_plots-alogs_"+nom_algos+"-envs_"+nom_envs+".png")
 
